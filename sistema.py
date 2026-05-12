@@ -728,15 +728,15 @@ class SistemaGestion:
         print("   RESUMEN DEL SISTEMA SOFTWARE FJ")
         print("=" * 65)
 
-        print(f"\n📋 CLIENTES REGISTRADOS ({len(self.__clientes)}):")
+        print(f"\n CLIENTES REGISTRADOS ({len(self.__clientes)}):")
         for c in self.__clientes:
             print(f"   • {c.describir()}")
 
-        print(f"\n🛠️  SERVICIOS DISPONIBLES ({len(self.__servicios)}):")
+        print(f"\n  SERVICIOS DISPONIBLES ({len(self.__servicios)}):")
         for s in self.__servicios:
             print(f"   • {s.describir()}")
 
-        print(f"\n📅 RESERVAS ({len(self.__reservas)}):")
+        print(f"\n RESERVAS ({len(self.__reservas)}):")
         for r in self.__reservas:
             print(f"   • {r.describir()}")
 
@@ -883,7 +883,7 @@ def ejecutar_simulacion():
                 incluir_materiales=True,
                 impuesto_porcentaje=19
             )
-            print(f"\n  💰 Costo con materiales + IVA 19%: ${costo_iva:,.0f}")
+            print(f"\n  Costo con materiales + IVA 19%: ${costo_iva:,.0f}")
             registrar_log("INFO", f"Costo asesoría con IVA calculado: ${costo_iva:,.0f}")
         except Exception as e:
             registrar_log("ERROR", f"Error calculando costo con IVA: {e}")
@@ -893,8 +893,8 @@ def ejecutar_simulacion():
     # RESUMEN FINAL
     # ------------------------------------------------------------------
     sistema.mostrar_resumen()
-    print(f"\n📁 Todos los eventos y errores fueron guardados en: '{ARCHIVO_LOG}'")
-    print("\n✅ Simulación completada. El sistema se mantuvo estable ante todos los errores.\n")
+    print(f"\n Todos los eventos y errores fueron guardados en: '{ARCHIVO_LOG}'")
+    print("\n Simulación completada. El sistema se mantuvo estable ante todos los errores.\n")
 
 
 # =============================================================================
